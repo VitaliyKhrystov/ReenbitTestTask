@@ -1,4 +1,4 @@
-const baseApi = '';
+const baseApi = 'https://reenbitwebapp.azurewebsites.net/';
 
 export const environment = {
   apiURL: baseApi,

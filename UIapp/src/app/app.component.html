@@ -1,21 +1,43 @@
 <div class="container w-25">
-<form [formGroup]="myForm" novalidate (ngSubmit)="submit($event)">
+  <form [formGroup]="myForm" novalidate (ngSubmit)="send()">
     <div class="form-group mt-4">
-        <label>Email</label>
-        <input class="form-control" name="email" formControlName="userEmail" />
+      <label>Email</label>
+      <input class="form-control" name="email" formControlName="userEmail" />
 
-        <div class="alert alert-danger"
-            *ngIf="myForm.controls['userEmail'].invalid && myForm.controls['userEmail'].touched">
-            Некорректный email
-        </div>
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          myForm.controls['userEmail'].invalid &&
+          myForm.controls['userEmail'].touched
+        "
+      >
+        Please use a valid email address!
+      </div>
     </div>
     <div class="form-group mt-4">
-       <input type="file" class="file-upload" formControlName="userFile">
+      <input
+        type="file"
+        class="file-upload"
+        formControlName="userFile"
+        (change)="onChange($event)"
+      />
     </div>
+    <div
+      class="alert alert-danger"
+      *ngIf="
+        myForm.controls['userFile'].invalid &&
+        myForm.controls['userFile'].touched
+      "
+    >
+      The file format is invalid! Upload file "{{ fileType }} format."
+    </div>
+    <p class="text-success mt-4">
+      {{status}}
+    </p>
     <div class="form-group">
-        <button class="btn btn-info mt-4" [disabled]="myForm.invalid">
-            Send
-        </button>
+      <button class="btn btn-info mt-2" [disabled]="myForm.invalid">
+        Send
+      </button>
     </div>
   </form>
 </div>

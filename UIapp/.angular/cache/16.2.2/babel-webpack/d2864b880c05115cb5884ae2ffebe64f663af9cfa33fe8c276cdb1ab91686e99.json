@@ -1,0 +1,1 @@
+{"ast":null,"code":"const baseApi = 'https://reenbitwebapp.azurewebsites.net/';\nexport const environment = {\n  apiURL: baseApi,\n  fileType: 'docx'\n};","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

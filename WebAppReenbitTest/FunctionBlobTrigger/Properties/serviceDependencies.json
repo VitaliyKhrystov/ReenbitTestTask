@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets"
+    },
+    "storage1": {
+      "type": "storage",
+      "connectionId": "AzureWebJobsStorage"
+    },
+    "storage2": {
+      "type": "storage",
+      "connectionId": "FunctionBlobTrigger",
+      "dynamicId": null
+    }
+  }
+}

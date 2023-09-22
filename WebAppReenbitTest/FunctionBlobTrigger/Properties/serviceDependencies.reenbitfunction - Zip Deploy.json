@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "storage1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/reenbitstoragetest",
+      "type": "storage.azure",
+      "connectionId": "AzureWebJobsStorage"
+    },
+    "storage2": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/reenbitstoragetest",
+      "type": "storage.azure",
+      "connectionId": "FunctionBlobTrigger",
+      "dynamicId": null
+    }
+  }
+}
